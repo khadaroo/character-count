@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Character counter</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
         <img class="logo" src="assets/images/logo-light-theme.svg" alt="logo" />
+        <img class="logo" src="assets/images/logo-dark-theme.svg" alt="logo" />
         <button class="theme-toggle">
           <img
             class="theme-icon"
             src="assets/images/icon-moon.svg"
             alt="Moon icon"
+          />
+          <img
+            class="theme-icon"
+            src="assets/images/icon-sun.svg"
+            alt="Sun icon"
           />
         </button>
       </header>
@@ -26,43 +33,61 @@
             spellcheck="false"
             placeholder="Start typing here… (or paste your text)"
           ></textarea>
+          <p class="error hidden">
+            <img
+              class="error-icon"
+              src="/assets/images/icon-info.svg"
+              alt="Info icon"
+            />
+            <span class="error-message"></span>
+          </p>
         </form>
         <div class="options">
           <div class="option">
             <label class="option__label">
-              <input class="option__checkbox" type="checkbox" name="spaces" />
+              <input
+                class="option__checkbox exclude-spaces-checkbox"
+                type="checkbox"
+                name="spaces"
+              />
               Exclude Spaces
             </label>
 
             <label class="option__label">
               <input
-                class="option__checkbox"
+                class="option__checkbox character-limit-checkbox"
                 type="checkbox"
                 name="character-limit"
               />
               Set Character Limit
-              <input class="option__character-limit" type="number" />
+              <input
+                class="option__character-limit"
+                name="character-limit-number"
+                type="number"
+              />
             </label>
           </div>
 
-          <p class="reading-time">Approx. reading time: 0 minute</p>
+          <p>
+            Approx. reading time: <span class="reading-time">0</span> minute
+          </p>
         </div>
       </main>
 
       <div class="stats-density__container">
         <section class="stats">
           <article class="stat">
-            <p class="stat__value">00</p>
+            <p class="stat__value total-characters">00</p>
             <h3 class="stat__title">Total Characters</h3>
           </article>
 
           <article class="stat">
-            <p class="stat__value">00</p>
+            <p class="stat__value word-count">00</p>
             <h3 class="stat__title">Word Count</h3>
           </article>
 
           <article class="stat">
-            <p class="stat__value">00</p>
+            <p class="stat__value sentence-count">00</p>
             <h3 class="stat__title">Sentence Count</h3>
           </article>
         </section>
