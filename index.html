@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Character counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="logo" src="assets/images/logo-light-theme.svg" alt="logo" />
+        <button class="theme-toggle">
+          <img
+            class="theme-icon"
+            src="assets/images/icon-moon.svg"
+            alt="Moon icon"
+          />
+        </button>
+      </header>
+      <h1 class="title">Analyze your text in real-time.</h1>
+      <main class="main">
+        <form class="form">
+          <textarea
+            class="textarea"
+            spellcheck="false"
+            placeholder="Start typing here… (or paste your text)"
+          ></textarea>
+        </form>
+        <div class="options">
+          <div class="option">
+            <label class="option__label">
+              <input class="option__checkbox" type="checkbox" name="spaces" />
+              Exclude Spaces
+            </label>
+
+            <label class="option__label">
+              <input
+                class="option__checkbox"
+                type="checkbox"
+                name="character-limit"
+              />
+              Set Character Limit
+              <input class="option__character-limit" type="number" />
+            </label>
+          </div>
+
+          <p class="reading-time">Approx. reading time: 0 minute</p>
+        </div>
+      </main>
+
+      <div class="stats-density__container">
+        <section class="stats">
+          <article class="stat">
+            <p class="stat__value">00</p>
+            <h3 class="stat__title">Total Characters</h3>
+          </article>
+
+          <article class="stat">
+            <p class="stat__value">00</p>
+            <h3 class="stat__title">Word Count</h3>
+          </article>
+
+          <article class="stat">
+            <p class="stat__value">00</p>
+            <h3 class="stat__title">Sentence Count</h3>
+          </article>
+        </section>
+
+        <section class="density">
+          <h2 class="density__title">Letter Density</h2>
+          <p class="density__description">
+            No characters found. Start typing to see letter density.
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
